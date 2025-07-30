@@ -674,6 +674,12 @@
         },
         "config": {
           "type": "object"
+        },
+        "externalConfigMap": {
+          "type": "boolean"
+        },
+        "externalConfigMapName": {
+          "type": "string"
         }
       }
     },

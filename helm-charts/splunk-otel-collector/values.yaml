@@ -458,6 +458,11 @@ agent:
   # existing fields can be disabled by setting them to null value.
   config: {}
 
+  # Use external configmap for agent configuration
+  # If true, the agent will use the configmap specified in externalConfigMapName
+  externalConfigMap: false
+  externalConfigMapName: ""
+
   # Discovery mode attempts to automatically configure the agent with bundled metric receiver configuration.
   # For more details, refer to: https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#discovery-mode
   # The discovery feature requires the metrics pipeline which is always enabled for `splunkObservability`.

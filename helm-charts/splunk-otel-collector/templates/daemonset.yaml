@@ -556,7 +556,7 @@ spec:
       {{- end }}
       - name: otel-configmap
         configMap:
-          name: {{ template "splunk-otel-collector.fullname" . }}-otel-agent
+          name: {{ if .Values.agent.externalConfigMap }}{{ .Values.agent.externalConfigMapName }}{{ else }}{{ template "splunk-otel-collector.fullname" . }}-otel-agent{{ end }}
           items:
             - key: relay
               path: relay.yaml
